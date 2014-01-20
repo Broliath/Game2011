@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <cmath>
 #include <fstream>
 #include <sstream>
 
@@ -21,8 +20,8 @@ int loadStory()
 	string alltext = buffer.str();
 
 	//create 2 variable that will decide the start and end of the segment of text
-	int textStart = 0; // number storing the location of forst letter
-	int textEnd;// number storing the location of the second letter
+	size_t textStart = 0; // number storing the location of forst letter
+	size_t textEnd;// number storing the location of the second letter
 
 	//load the story segments into the story array
 	for (int i = 0; i <= 4; i++)
