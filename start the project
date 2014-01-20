@@ -13,7 +13,7 @@ string storyArray [4][4];
 
 //load the story text
 int loadStory()
-{a
+{
 	//reads the .tx file and stores it into the string called "alltext"
 	ifstream in("test.txt");
 	stringstream buffer;
