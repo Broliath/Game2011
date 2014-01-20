@@ -1,0 +1,91 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <fstream>
+#include <sstream>
+
+using namespace std;
+
+//Global Variables
+bool gameStarted = false;
+int playerLocation [4][4];
+string storyArray [4][4];
+
+//load the story text
+int loadStory()
+{a
+	//reads the .tx file and stores it into the string called "alltext"
+	ifstream in("test.txt");
+	stringstream buffer;
+	buffer << in.rdbuf();
+	string alltext = buffer.str();
+
+	//create 2 variable that will decide the start and end of the segment of text
+	size_t textStart; // number storing the location of forst letter
+	size_t textEnd;// number storing the location of the second letter
+
+	//load the story segments into the story array
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+			textStart = 0;
+			textEnd = alltext.find("|", textStart); //find the next | in the text that seperates the room text
+			storyArray[i][j] = alltext.substr(textStart, (textEnd - textStart));
+		}
+	}
+	return 0;
+}
+
+//get the room Description
+string getRoomDescription()
+{
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+			if (playerLocation[i][j] == 1)
+			{
+				return storyArray[i][j];
+			}
+		}
+	}
+}
+
+//Find where the player can go
+int directionOptions()
+{
+	return 0;
+}
+
+//Set the players new location
+int setLocation(int playerY, int playerX)
+{
+	playerLocation[playerY][playerX] = 1;
+	return 0;
+}
+
+//Setup Function
+int initialStartup()
+{
+	loadStory();
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+			playerLocation [i][j] = 0;
+		}
+	}
+	setLocation(2, 4);
+	gameStarted = true;
+	return 0;
+}
+
+int main()
+{
+	if (gameStarted == false)
+	{
+		initialStartup();
+	}
+	cout << getRoomDescription();
+}
