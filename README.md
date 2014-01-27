@@ -1,13 +1,17 @@
 Game2011
 ========
-Text Based RPG
-Genre: Medieval Fantasy
+
+Title: Origional Quest
+
+Genre: Text based Medieval Fantasy RPG
 
 High Concept:
-The player finds themself trapped in a dungeon and they must escape. The dungeon includes obstacles, traps, monsters,
-and riddles.
+    - The player finds themself trapped in a dungeon and they must escape. The dungeon includes obstacles, traps,               monsters,
+      and riddles.
 
-Tech: Code will be written using C++
+Tech:
+    - Code will be written using C++
+    -
 
 Benefits of said tech:
     - group is more knowledgable in C++ than some other languages
@@ -19,3 +23,5 @@ Roles:
     -
     
 Project Backlog:
+    - 
+    - 
