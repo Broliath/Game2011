@@ -14,7 +14,6 @@ Tech:
 
 Benefits of said tech:
     - group is more knowledgable in C++ than some other languages
-    - 
     
 Downfalls of said tech:
     - Using a familiar language reduces the learning experience
@@ -44,3 +43,6 @@ Project Backlog:
     - Inventory class
         - Tracks items for player
         - Determines exploration possibilities
+    - Map Class
+        - Tracks location
+        - Tracks direction possibilities
