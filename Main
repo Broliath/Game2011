@@ -1,7 +1,6 @@
 #include <iostream>
 #include <Map.h>
 #include <Player.h>
-#include <Inventory.h>
 
 using namespace std;
 
