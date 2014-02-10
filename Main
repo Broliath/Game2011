@@ -5,40 +5,64 @@
 
 using namespace std;
 
-
+Player mainCharacter = new Player();
+Map floor1 = new Map();
 
 
 void keyInput(unsigned char key)
 {
    switch(key)
    {
+
        case w://w key
        case W://W key
        case 72://up arrow
-       
+           if (         floor1.getRoom(mainCharacter.getPlayerPosition()).canGoNorth)
+               {
+           mainCharacter.setPlayerPostion(mainCharacter.getPlayerPosition.getX(), setPlayerPostion(mainCharacter.getPlayerPosition.getY() - 1)
+               }
+           else
+           {
+               cout << "you can't move that way, so don't even think about it" << endl;
+           }
            break;
        case a://a key
        case A://A key
        case 75://left arrow
-       
+          if (floor1.getRoom(mainCharacter.getPlayerPosition()).canGoWest)
+               {
+                   mainCharacter.setPlayerPostion(mainCharacter.getPlayerPosition.getX() - 1, setPlayerPostion(mainCharacter.getPlayerPosition.getY())
+               }
+            else
+               cout << "you can't move that way, so don't even think about it" << endl;
            break;
        case s://s key
        case S://S key
        case 80://down arrow
-       
-           break;
+           if (floor1.getRoom(mainCharacter.getPlayerPosition()).canGoSouth)
+           {
+               mainCharacter.setPlayerPostion(mainCharacter.getPlayerPosition.getX(), setPlayerPostion(mainCharacter.getPlayerPosition.getY() + 1)
+           }
+           else
+               cout << "you can't move that way, so don't even think about it" << endl;
+            break;
        case d://d key
        case D://D key
        case 77://right arrow
-       
+           if (floor1.getRoom(mainCharacter.getPlayerPosition()).canGoEast)
+           {
+               mainCharacter.setPlayerPostion(mainCharacter.getPlayerPosition.getX() - 1, setPlayerPostion(mainCharacter.getPlayerPosition.getY())
+           }
+           else
+               cout << "you can't move that way, so don't even think about it" << endl;
            break;
        default:
-           cout << "you can't move that way" << endl;
+           cout << "you can't move that way, so don't even think about it" << endl;
            break;
    }
 }
 
 int main ()
 {
-    
+    cout<<roomDescription<<endl;
 }
