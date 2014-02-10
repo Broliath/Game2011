@@ -1,7 +1,7 @@
 Game2011
 ========
 
-Title: Origional Quest
+Title: Original Quest
 
 Genre: Text based Medieval Fantasy RPG
 
