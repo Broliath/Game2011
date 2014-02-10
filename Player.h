@@ -1,6 +1,6 @@
 #include <iostream>
-#include <Position.h>
-#include <Inventory.h>
+#include "Position.h"
+#include "Inventory.h"
 
 class Player
 {
