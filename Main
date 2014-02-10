@@ -7,7 +7,7 @@ using namespace std;
 Player mainCharacter = new Player();
 Map floor1 = new Map();
 
-
+//move the player based on key input
 void keyInput(unsigned char key)
 {
    switch(key)
@@ -16,6 +16,7 @@ void keyInput(unsigned char key)
        case w://w key
        case W://W key
        case 72://up arrow
+           //if the room allows going north, get the players position and move them north
            if (         floor1.getRoom(mainCharacter.getPlayerPosition()).canGoNorth)
                {
            mainCharacter.setPlayerPostion(mainCharacter.getPlayerPosition.getX(), setPlayerPostion(mainCharacter.getPlayerPosition.getY() - 1)
@@ -28,6 +29,7 @@ void keyInput(unsigned char key)
        case a://a key
        case A://A key
        case 75://left arrow
+           //if the room allows going west, get the players position and move them west
           if (floor1.getRoom(mainCharacter.getPlayerPosition()).canGoWest)
                {
                    mainCharacter.setPlayerPostion(mainCharacter.getPlayerPosition.getX() - 1, setPlayerPostion(mainCharacter.getPlayerPosition.getY())
@@ -38,6 +40,7 @@ void keyInput(unsigned char key)
        case s://s key
        case S://S key
        case 80://down arrow
+           //if the room allows going south, get the players position and move them south
            if (floor1.getRoom(mainCharacter.getPlayerPosition()).canGoSouth)
            {
                mainCharacter.setPlayerPostion(mainCharacter.getPlayerPosition.getX(), setPlayerPostion(mainCharacter.getPlayerPosition.getY() + 1)
@@ -48,6 +51,7 @@ void keyInput(unsigned char key)
        case d://d key
        case D://D key
        case 77://right arrow
+           //if the room allows going east, get the players position and move them east
            if (floor1.getRoom(mainCharacter.getPlayerPosition()).canGoEast)
            {
                mainCharacter.setPlayerPostion(mainCharacter.getPlayerPosition.getX() - 1, setPlayerPostion(mainCharacter.getPlayerPosition.getY())
